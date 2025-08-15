@@ -7,6 +7,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -25,6 +27,7 @@ public class DetailOrdenCompra {
 	
 	@ManyToOne
 	@JoinColumn(name = "idOrdenCompra")
+	@JsonIgnore
 	private OrdenCompra ordenCompra;
 	
 	@ManyToOne
